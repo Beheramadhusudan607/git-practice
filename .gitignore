@@ -1,5 +1,7 @@
+
 .env
 password.txt
 *.log
 temp/
+
 
