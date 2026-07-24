@@ -19,5 +19,12 @@ pipeline {
                 sh 'python3 --version'
             }
         }
+
+        stage('Test') {
+            steps {
+                echo "Starting Test"
+                sh 'python3 test.py'
+            }
+        }
     }
 }
