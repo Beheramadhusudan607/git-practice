@@ -24,6 +24,11 @@ pipeline {
             steps {
                 echo "Starting Test"
                 sh 'python3 test.py'
+        stage('Deploy') {
+            steps {
+                echo "Starting Deployment"
+                sh 'echo "Application deployed successfully!"'
+                
             }
         }
     }
