@@ -32,15 +32,10 @@ pipeline {
                 echo "Starting Container Deployment"
 
                 sh 'podman --version'
-
                 sh 'podman build -t git-practice-app .'
-
                 sh 'podman rm -f git-practice-container || true'
-
                 sh 'podman run -d --name git-practice-container -p 8000:8000 git-practice-app'
-
                 sh 'podman ps'
-                }
             }
         }
     }
