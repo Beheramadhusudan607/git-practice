@@ -30,7 +30,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Starting Deployment"
-                sh 'echo "Application deployed successfully!"'
+                sh 'podman --version'
+                sh 'podman ps'
             }
         }
     }
