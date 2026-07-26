@@ -37,7 +37,7 @@ pipeline {
 
                 sh 'podman rm -f git-practice-container || true'
 
-                sh 'podman run -d --name git-practice-container -p 8000:8000 git-practice-app'
+                sh 'podman run -d --name git-practice-container -p 8001:8000 git-practice-app'
 
                 sh 'podman ps'
             }
@@ -49,7 +49,7 @@ pipeline {
 
                 sh 'sleep 3'
 
-                sh 'curl -f http://localhost:8000/health'
+                sh 'curl -f http://localhost:8001/health'
             }
         }
     }
